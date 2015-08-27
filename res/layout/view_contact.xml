@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Иванов Иван Иванович"
+            android:id="@+id/nameView"
+            android:textSize="25sp"
+            android:background="#ff3d90fb" android:textColor="#ffffffff" android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:paddingTop="10sp"
+            android:paddingBottom="10sp" android:paddingLeft="10sp"/>
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/avatarView"
+            android:src="@drawable/face" android:background="#ffa39ab1" android:layout_below="@+id/nameView"
+            android:layout_alignParentStart="true"
+            android:onClick="callIntent"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ДАТА РОЖДЕНИЯ"
+            android:id="@+id/birthdayTitleView" android:layout_below="@+id/avatarView"
+            android:background="#ffffffff" android:textColor="#ff100efb" android:textSize="18sp"
+            android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:paddingTop="20sp"
+            android:paddingLeft="10sp" android:paddingBottom="5sp"/>
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:id="@+id/imageView" android:layout_below="@+id/birthdayTitleView"
+            android:layout_centerHorizontal="true" android:background="#ff100efb"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="25.01.1970"
+            android:id="@+id/birthdayView" android:layout_below="@+id/imageView"
+            android:background="#ffffffff" android:textColor="#ff000000"
+            android:textSize="23sp" android:layout_alignParentStart="true" android:layout_alignParentEnd="true"
+            android:paddingTop="5sp" android:paddingLeft="10sp"
+            android:onClick="showDatePickerDialog" android:clickable="true"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ"
+              android:id="@+id/mailTitleView" android:background="#ffffffff"
+              android:textColor="#ff100efb" android:textSize="18sp"
+              android:paddingTop="15sp" android:paddingLeft="10sp"
+              android:paddingBottom="5sp" android:layout_below="@+id/birthdayView"
+              android:layout_alignParentStart="true" android:layout_alignParentEnd="true"/>
+    <ImageView android:layout_width="match_parent" android:layout_height="1sp" android:id="@+id/imageView2"
+               android:background="#ff100efb" android:layout_below="@+id/mailTitleView"
+               android:layout_centerHorizontal="true"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ivanovivan@gmail.com"
+              android:id="@+id/mailView" android:background="#ffffffff"
+              android:textColor="#ff000000" android:textSize="23sp"
+              android:paddingTop="5sp"
+              android:paddingLeft="10sp" android:layout_below="@+id/imageView2" android:layout_alignParentStart="true"
+              android:layout_alignParentEnd="true"
+              android:onClick="editTextView" android:clickable="true"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ТЕЛЕФОН"
+              android:id="@+id/phoneTitleView" android:background="#ffffffff"
+              android:textColor="#ff100efb" android:textSize="18sp"
+              android:paddingTop="15sp" android:paddingLeft="10sp"
+              android:paddingBottom="5sp" android:layout_below="@+id/mailView"
+              android:layout_alignParentStart="true" android:layout_alignParentEnd="true"/>
+    <ImageView android:layout_width="match_parent" android:layout_height="1sp" android:id="@+id/imageView3"
+               android:background="#ff100efb"
+               android:layout_below="@+id/phoneTitleView" android:layout_centerHorizontal="true"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:text="+7 383 555-55-55" android:id="@+id/homePhoneView" android:background="#ffffffff"
+              android:textColor="#ff000000" android:textSize="23sp" android:paddingTop="5sp"
+              android:paddingLeft="10sp"
+              android:layout_below="@+id/imageView3" android:layout_alignParentStart="true"
+              android:layout_alignParentEnd="true" android:clickable="true"
+            android:onClick="editTextView"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ДОМАШНИЙ"
+            android:id="@+id/homePhoneSubTitleView"
+            android:background="#ffffffff" android:textColor="#ff787878"
+            android:textSize="15sp"
+            android:layout_below="@+id/homePhoneView" android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" android:paddingLeft="10sp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="+7 383 444-44-44"
+              android:id="@+id/workPhoneView" android:background="#ffffffff" android:textColor="#ff000000"
+              android:textSize="23sp" android:paddingTop="5sp" android:paddingLeft="10sp"
+              android:layout_below="@+id/homePhoneSubTitleView" android:layout_alignParentStart="true"
+              android:layout_alignParentEnd="true" android:clickable="true"
+            android:onClick="editTextView"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="РАБОЧИЙ"
+              android:id="@+id/workPhoneSubTitleView" android:background="#ffffffff" android:textColor="#ff787878"
+              android:textSize="15sp"
+              android:paddingLeft="10sp" android:layout_below="@+id/workPhoneView"
+              android:layout_alignParentStart="true" android:layout_alignParentEnd="true"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeCallButton"
+            android:src="@android:drawable/stat_sys_phone_call"
+            android:layout_below="@+id/imageView3" android:layout_alignLeft="@+id/workCallButton"
+            android:onClick="callIntent"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/workCallButton"
+                 android:src="@android:drawable/stat_sys_phone_call"
+                 android:layout_alignTop="@+id/workPhoneView" android:layout_alignParentRight="true"
+                 android:layout_marginRight="20sp"
+            android:onClick="callIntent"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/mailButton"
+                 android:src="@android:drawable/sym_action_email"
+                 android:layout_below="@+id/imageView2" android:layout_alignParentRight="true"
+                 android:layout_marginRight="20sp"
+            android:onClick="callIntent"/>
+</RelativeLayout>

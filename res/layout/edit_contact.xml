@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameView"
+                android:textSize="25sp"
+                android:background="#ff3d90fb" android:textColor="#ffffffff" android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:paddingTop="10sp"
+                android:paddingBottom="10sp" android:paddingLeft="10sp" android:hint="Введите имя"
+                android:editable="true"
+                android:enabled="true" android:clickable="true" android:focusable="true"/>
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/avatarView"
+                android:src="@drawable/face" android:background="#ffa39ab1" android:layout_below="@+id/nameView"
+                android:layout_alignParentStart="true"
+                android:onClick="callIntent"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ДАТА РОЖДЕНИЯ"
+                android:id="@+id/birthdayTitleView" android:layout_below="@+id/avatarView"
+                android:background="#ffffffff" android:textColor="#ff100efb" android:textSize="18sp"
+                android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:paddingTop="20sp"
+                android:paddingLeft="10sp" android:paddingBottom="5sp"/>
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:id="@+id/imageView" android:layout_below="@+id/birthdayTitleView"
+                android:layout_centerHorizontal="true" android:background="#ff100efb"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/birthdayView" android:layout_below="@+id/imageView"
+                android:background="#ffffffff" android:textColor="#ff000000"
+                android:textSize="23sp" android:layout_alignParentStart="true" android:layout_alignParentEnd="true"
+                android:paddingTop="5sp" android:paddingLeft="10sp"
+                android:onClick="showDatePickerDialog" android:clickable="true" android:hint="Введите дату"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ"
+                  android:id="@+id/mailTitleView" android:background="#ffffffff"
+                  android:textColor="#ff100efb" android:textSize="18sp"
+                  android:paddingTop="15sp" android:paddingLeft="10sp"
+                  android:paddingBottom="5sp" android:layout_below="@+id/birthdayView"
+                  android:layout_alignParentStart="true" android:layout_alignParentEnd="true"/>
+        <ImageView android:layout_width="match_parent" android:layout_height="1sp" android:id="@+id/imageView2"
+                   android:background="#ff100efb" android:layout_below="@+id/mailTitleView"
+                   android:layout_centerHorizontal="true"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:id="@+id/mailView" android:background="#ffffffff"
+                  android:textColor="#ff000000" android:textSize="23sp"
+                  android:paddingTop="5sp"
+                  android:paddingLeft="10sp" android:layout_below="@+id/imageView2"
+                  android:layout_alignParentStart="true"
+                  android:layout_alignParentEnd="true"
+                  android:cursorVisible="true"
+                  android:clickable="true" android:hint="Введите email" android:editable="true" android:enabled="true"
+                  android:focusable="true" android:singleLine="false" android:textIsSelectable="false"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ТЕЛЕФОН"
+                  android:id="@+id/phoneTitleView" android:background="#ffffffff"
+                  android:textColor="#ff100efb" android:textSize="18sp"
+                  android:paddingTop="15sp" android:paddingLeft="10sp"
+                  android:paddingBottom="5sp" android:layout_below="@+id/mailView"
+                  android:layout_alignParentStart="true" android:layout_alignParentEnd="true"/>
+        <ImageView android:layout_width="match_parent" android:layout_height="1sp" android:id="@+id/imageView3"
+                   android:background="#ff100efb"
+                   android:layout_below="@+id/phoneTitleView" android:layout_centerHorizontal="true"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:id="@+id/homePhoneView" android:background="#ffffffff"
+                  android:textColor="#ff000000" android:textSize="23sp" android:paddingTop="5sp"
+                  android:paddingLeft="10sp"
+                  android:layout_below="@+id/imageView3" android:layout_alignParentStart="true"
+                  android:layout_alignParentEnd="true" android:clickable="true"
+                  android:hint="Введите номер" android:editable="true" android:enabled="true" android:focusable="true"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ДОМАШНИЙ"
+                android:id="@+id/homePhoneSubTitleView"
+                android:background="#ffffffff" android:textColor="#ff787878"
+                android:textSize="15sp"
+                android:layout_below="@+id/homePhoneView" android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" android:paddingLeft="10sp"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:id="@+id/workPhoneView" android:background="#ffffffff" android:textColor="#ff000000"
+                  android:textSize="23sp" android:paddingTop="5sp" android:paddingLeft="10sp"
+                  android:layout_below="@+id/homePhoneSubTitleView" android:layout_alignParentStart="true"
+                  android:layout_alignParentEnd="true" android:clickable="true"
+                  android:hint="Введите номер" android:editable="true" android:enabled="true" android:focusable="true"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="РАБОЧИЙ"
+                  android:id="@+id/workPhoneSubTitleView" android:background="#ffffffff" android:textColor="#ff787878"
+                  android:textSize="15sp"
+                  android:paddingLeft="10sp" android:layout_below="@+id/workPhoneView"
+                  android:layout_alignParentStart="true" android:layout_alignParentEnd="true"/>
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Сохранить"
+                android:id="@+id/saveButton" android:layout_below="@+id/workPhoneSubTitleView"
+                android:layout_centerHorizontal="true" android:background="#ff3d90fb" android:clickable="true"
+                android:textColor="#ffffffff" android:textSize="25sp"
+                android:onClick="saveNewContact"/>
+    </RelativeLayout>
+</ScrollView>

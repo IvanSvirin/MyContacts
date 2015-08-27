@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="#ffffffff" android:id="@+id/contact">
+
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/imAvatar"
+            android:src="@drawable/facelist"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/tvName"
+            android:text="Иванов Иван Иванович"
+              android:textColor="#ff000000"
+              android:textSize="25sp" android:layout_alignParentTop="true" android:layout_toRightOf="@+id/imAvatar"
+              android:layout_marginLeft="15sp" android:layout_marginTop="15sp" android:clickable="true"/>
+    <ImageView android:layout_width="match_parent" android:layout_height="1sp" android:id="@+id/imageView"
+               android:background="#ff100efb" android:layout_below="@+id/imAvatar"
+               android:layout_alignParentStart="true"/>
+
+</RelativeLayout>
